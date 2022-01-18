@@ -1,0 +1,358 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+html{
+  scroll-behavior: smooth;
+}
+.fas{
+  cursor: pointer;
+}
+
+/* ----------------------------------Navbar------------------------------------------ */
+.nav__black{
+  background-color: #001524;
+  z-index: 2;
+  transition: all 0.1s ease-out;
+  box-shadow: 0px 10px 50px gray;
+}
+.nav__white{
+  transition: all 0.3s ease-out;
+}
+.navbar{
+  position: fixed;
+  z-index: 2;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+.navbar-brand{
+  transition: all 0.3s ease-out;
+}
+.bg-light{
+  background-color: #e8a87c !important;
+}
+
+.menu{
+  position: absolute;
+  top: 220%;
+  right: -80%;
+  background-color: white;
+  padding: 20px;
+  box-sizing: 0 5px 25px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  transition: all 0.5s ease-in;
+  opacity: 0;
+  z-index: 500;
+  visibility: hidden;
+}
+.fa-user-circle{
+  transition: color 0.3s ease-out;
+}
+.menu:hover,
+.fa-user-circle:hover ~ .menu{
+  visibility: visible;
+  z-index: 500;
+  opacity: 1;
+  top: 170%;
+}
+.name {
+  text-align: center;
+  padding: 0 0 10px 0;
+  font-size: 1.4rem;
+}
+.email{
+  padding-bottom: 5px;
+}
+.menu::before{
+  content: "";
+  position: absolute;
+  right: 18%;
+  top: -5%;
+  width: 15px;
+  height: 15px;
+  transform: rotate(45deg);
+  background-color: white;
+  transition: all 0.3s ease;
+}
+.logout{
+  text-decoration: none;
+}
+/* ----------------------------Notebook addnew icon---------------------------------- */
+.notebook{
+  position: relative;
+  margin-top: 0px;
+  padding-top: 85px;
+}
+.notebook-header-active{
+  /* visibility: visible; */
+  opacity: 1;
+  /* transition: all 0.1s ease; 
+  -webkit-transition: all 0.1s ease-in-out; */
+}
+.notebook-header{
+  /* visibility: hidden; */
+  opacity: 0;
+  /* transition: all 0.1s ease; 
+  -webkit-transition: all 0.1s ease-out; */
+}
+.addnew-icon{
+  transition: all ease-in 0.3s;
+}
+.addnew-icon:hover{
+  color: rgb(182, 248, 202);
+}
+.fa-plus-circle{
+  position: relative;
+  z-index: 1;
+}
+.nonedisplay{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  top: 0;
+}
+
+
+/* --------------------------------------------------Popup------------------------------------------ */
+.popup{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0px;
+  left: 0px;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease-in 0.5s;
+}
+.popup-inner{
+  position: absolute;
+  width: auto;
+  height: auto;
+  box-shadow: 0px 0px 50px black;
+  padding: 80px 70px 20px 70px;
+  border-radius: 10px;
+  background-color: #d4d4d4;
+  max-height: 90vh;
+}
+@media (max-width: 784px){
+  .popup-inner{
+  padding: 40px 30px 10px 30px;
+} 
+}
+@media (max-width: 636px){
+  .popup-inner{
+  padding: 30px 20px 10px 20px;
+  width: 95vw;
+  }
+  form{
+    padding: 0px 10px;
+  }
+} 
+
+
+.cancel-icon{
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
+  position: absolute;
+  color: #ffffff;
+  right: -1.5%;
+  top: -4%;
+}
+.fa-window-close{
+  background: radial-gradient(#aeb6bd 50%, transparent 50%);
+  transition: all ease-in 0.3s;
+}
+.fa-window-close:hover{
+  color: #e64949;
+  background: radial-gradient(white 50%, transparent 50%);
+
+}
+.addInput{
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none !important;
+}
+
+
+/* --------------------------------------------Notes---------------------------------- */
+.note-body{
+  width: 90%;
+  min-width: 100px;
+  margin-top: 50px;
+  margin: 50px auto 20px auto;
+  border-top: 5px solid ;
+  box-shadow: 0px 0px 25px black ;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 1.4em 2.5em;
+  background-color: black;
+  color: white;
+}
+.heading{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+.title{
+  padding: 2px 3px;
+  border-radius: 5px;
+  width: fit-content;
+  background-color: rgb(160, 160, 255);
+}
+.desc{
+  position: relative;
+  word-wrap: break-word;
+  margin-bottom: 20px;
+  height: 100px;
+
+}
+.icon{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.fa-trash:hover{
+  color: #7f868b;
+}
+.fa-pencil-alt:hover{
+  color: rgb(91, 91, 214);
+}
+
+
+
+/* --------------------------------Login----------------------------------------- */
+form{
+  padding: 0px 30px;
+}
+.login-header{
+  padding: 20px 0 20px 0;
+  border-bottom: 1px solid black;
+  color: #2691d9;
+}
+.border-body{
+
+  box-shadow: 0px 0px 15px grey ;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 400px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+.txt-field{
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 30px 0;
+}
+form .my-form-control{
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+.label{
+  display: flex ;
+  position: absolute;
+  top: 50%;
+  margin-left: 5px;
+  color: #adadad;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: all 0.35s ease-in-out;
+}
+.outline::before{
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: #2691d9;
+  width: 0%;
+  transition: all 0.35s ease-in-out;
+  height: 2px;
+  z-index: 2;
+}
+.my-form-control:focus{
+  border-radius: 5px;
+}
+.my-form-control:focus ~ label,
+.my-form-control:valid ~ label{
+  top: -6px;
+  color: #2691d9;
+  font-size: 13px;
+}
+.my-form-control:focus ~ .outline::before
+.my-form-control:valid ~ .outline::before{
+  width: 100%;
+}
+.signup{
+  text-decoration: none;
+}
+
+/*---------------------------------About------------------------------------*/
+.main__about{
+  height: 90vh;
+  margin-top: 10vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+}
+.about__row{
+  height: 100%;
+  width: 100%;
+}
+.about__font__h1{
+  background:transparent;
+  color: transparent;
+  font-size: 5vw;
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+.about__font__h3{
+  font-size: 3vw;
+}
+.main__btn{
+  transition: all 0.3s ease-in;
+  font-size: 1.5em;
+}
+.main__btn:hover{
+  background: transparent;
+  color: black;
+}
+
+.about__ill{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  height: auto;
+}
+@media screen and (max-width: 769px){
+  .about__ill{
+    width: 70vw;
+  }
+}
+@media screen and (max-width: 581px) {
+  .about__ill{
+    width: 80vw;
+  }
+  .about__font__h1{
+    font-size: 8vw;
+  }
+  .about__font__h3{
+    font-size: 3vw;
+  }
+}
