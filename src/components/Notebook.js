@@ -7,6 +7,7 @@ import { useHistory } from 'react-router';
 
 function Notebook() {
     let history = useHistory();
+    let num = 0;
     const [nav1, setNav1] = useState(false);
     const context = useContext(noteContext);
     const { notes, getallnotes, loading } = context;
@@ -54,10 +55,10 @@ function Notebook() {
                     <Popup pop={pop} togglePop={togglePop} />}
                 <div className="row">
                     {notes.length !== 0 ?
-                        Object.keys(notes).map((key) => {
+                        notes.map((note) => {
                             return (
-                                <div className="col-sm-12 col-md-6 col-12 col-lg-4">
-                                    <Notes key={notes[key]._id} title={notes[key].title} description={notes[key].description} tag={notes[key].tag} id={notes[key]._id} />
+                                <div key={num++} className="col-sm-12 col-md-6 col-12 col-lg-4">
+                                    <Notes key={note._id} title={note.title} description={note.description} tag={note.tag} id={note._id} />
                                 </div>
                             )
                         }) : ""

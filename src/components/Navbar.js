@@ -39,7 +39,7 @@ export default function Navbar() {
                                 <div className="menu">
                                     <div className="name">{user.name}</div>
                                     <div className="email text-muted">{user.email}</div>
-                                    <Link className="logout" onClick={() => handleLogout()} to="/about"><i class="fas fa-sign-out-alt"></i> Logout</Link>
+                                    <Link className="logout" onClick={() => handleLogout()} to="/about"><i className="fas fa-sign-out-alt"></i> Logout</Link>
                                 </div>
                             </div>
                         </div>
